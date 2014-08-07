@@ -1,0 +1,12 @@
+<div class="container">
+  <form action="/" method="post">
+    <input id="shorten_url" taborder="1" name="original_link" type="text" class="text" placeholder="Paste a link to shorten it" value="" autocomplete="off" autocorrect="off" autocapitalize="off">
+    <input id="shorten_btn" type="submit" class="btn" value="Shorten">
+  </form>
+
+  <h3>Short.ened links:</h3>
+  <% @all_urls.each do |url| %>
+  <p><%= url.short_link %></p>
+  <% end %>
+
+</div>
